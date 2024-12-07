@@ -16,7 +16,7 @@ import React from "react";
 const Composition = ({ data }) => {
   return (
     <div>
-      <p>This is the content for {data || "no selection"}</p>
+      <p>This is the content for {data || "Tab 1"}</p>
     </div>
   );
 };
