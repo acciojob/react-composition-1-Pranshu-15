@@ -1,13 +1,33 @@
+// import React from "react";
+// import "./../styles/App.css";
+// import List from "./List";
+// import Composition from "./Composition";
 
-import React from "react";
-import './../styles/App.css';
+// const App = () => {
+//   return (
+//     <>
+//       <List/>
+//       <Composition data = {liItems}/>
+//     </>
+//   );
+// };
+
+// export default App;
+
+import React, { useState } from "react";
+import "./../styles/App.css";
+import List from "./List";
+import Composition from "./Composition";
 
 const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+  const [selectedItem, setSelectedItem] = useState("");
 
-export default App
+  return (
+    <>
+      <List setSelectedItem={setSelectedItem} />
+      <Composition data={selectedItem} />
+    </>
+  );
+};
+
+export default App;
